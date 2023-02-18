@@ -1,0 +1,12 @@
+BIN2DEC by Dietmar SCHRAUSSER 2009
+
+Handhabung
+----------
+
+BIN2DEC [b]
+-----------------
+[b] ...Binaerzahl
+-----------------
+BIN2DEC von Dietmar Schrausser
+compiliert Apr 10 2009 @ 04:58:08
+

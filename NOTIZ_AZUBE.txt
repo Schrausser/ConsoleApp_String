@@ -1,0 +1,15 @@
+AZUBE by Dietmar SCHRAUSSER 2oo8
+
+Allgemein
+---------
+DOS Anwendung AZUBE.EXE zur Änderung einzelner Zeichen einer ASCII Datei.
+   
+Handhabung
+----------
+AZUBE [input] [output] [a] [b] 
+[input] ... Eingabe Datei
+[output] .. Ausgabe Datei 
+[a] ...... Zeichen
+[b] ...... ändern 
+
+bsp: AZUBE input.txt output.txt , .

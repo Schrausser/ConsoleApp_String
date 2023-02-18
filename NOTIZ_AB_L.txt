@@ -1,0 +1,25 @@
+AB_L by Dietmar SCHRAUSSER 2010
+
+Allgemein
+---------
+AB_L.EXE fügt einen String (a) vor und/oder einen String (b) nach jeder Zeile einer Datei ein.
+	
+Arbeitsweise
+------------
+1# Übernahme einer einspaltigen ASCII Datei. 
+
+2# Ausgabe einer (ein-,) zwei- oder dreispaltigen ASCII Datei
+
+Handhabung
+----------
+AB_L [input] [output] [a] [sw] [z] [sw]
+[input] ... Eingabe Datei 
+[output] .. Ausgabe Datei 
+[a]........ String welcher vor jeder Zeile der Inputdatei eingefügt wird
+[sw].......(0): nichts vor jeder Zeile einfügen
+[z]........ String welcher nach jeder Zeile der Inputdatei eingefügt wird
+[sw].......(0): nichts nach jeder Zeile einfügen
+
+bsp: AB_L in.txt out.txt move 1 verzeichnis 1 
+     AB_L in.txt out.txt del 1 0 0
+

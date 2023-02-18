@@ -1,0 +1,37 @@
+TEZUTE by Dietmar SCHRAUSSER 2oo8
+
+Allgemein
+---------
+DOS Anwendung TEZUTE.EXE zur Änderung einzelner Strings einer Datei.
+ 
+Handhabung
+----------
+TEZUTE [input] [output] [a] [b] 
+[input] ... Eingabe Datei
+[output] .. Ausgabe Datei 
+[a] ...... String
+[b] ...... ändern 
+
+bsp	input.txt
+
+	78	00
+	67	8
+	null	00
+	9	null	
+		
+		
+
+	TEZUTE input.txt output.txt null 00
+
+	output.txt
+
+	78
+	00
+	67
+	8
+	00
+	00
+	9
+	00
+
+	(Zur formatierten Ausgebe Quellcode bearbeiten)

@@ -1,0 +1,13 @@
+DEC2 by Dietmar SCHRAUSSER 2009
+
+
+Handhabung
+----------
+
+DEC2 [d]
+-----------------
+[d] ..Dezimalzahl
+-----------------
+DEC2 von Dietmar Schrausser
+compiliert Apr  9 2009 @ 22:00:25
+

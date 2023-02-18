@@ -1,0 +1,18 @@
+AIIB by Dietmar SCHRAUSSER 2009
+
+Allgemein
+---------
+AIIB.EXE recodiert eine SCHRAUSSER CODE oder dezimal encodierte Datei (Encodierung via BIIA.EXE).
+
+Arbeitsweise
+------------
+1# Übernahme einer SCHRAUSSER CODE Datei (*.bii). 
+
+2# Ausgabe der recodierten Ursprungsdatei.
+
+Handhabung
+----------
+AIIB [input]
+[input] ... SCHRAUSSER CODE Datei 
+
+bsp:  AIIB bild.bii

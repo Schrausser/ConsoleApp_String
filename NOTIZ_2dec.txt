@@ -1,0 +1,13 @@
+2DEC by Dietmar SCHRAUSSER 2009
+
+
+Handhabung
+----------
+
+2DEC [x]
+-----------------
+[x] .... Argument
+-----------------
+2DEC von Dietmar Schrausser
+compiliert Apr 10 2009 @ 01:59:07
+

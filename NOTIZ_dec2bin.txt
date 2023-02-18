@@ -1,0 +1,12 @@
+DEC2BIN by Dietmar SCHRAUSSER 2009
+
+Handhabung
+----------
+
+DEC2BIN [d]
+-----------------
+[d] ..Dezimalzahl
+-----------------
+DEC2BIN von Dietmar Schrausser
+compiliert Apr  9 2009 @ 20:46:19
+

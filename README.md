@@ -1,5 +1,13 @@
 # ConsoleApp_String
 Console applications for string and transformation (German):
+## 2DEC
+
+Argument in Dezimalzahl.
+
+Handhabung:
+
+     2DEC [x] 
+     [x] .... Argument
 
 ## ABCD
 

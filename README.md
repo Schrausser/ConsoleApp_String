@@ -9,6 +9,15 @@ Handhabung:
      2DEC [x] 
      [x] .... Argument
 
+## BIN2DEC
+
+Binärzahl in Dezimalzahl.
+
+Handhabung:
+
+     BIN2DEC [b]
+     [b] ...Binärzahl
+
 ## ABCD
 
 Ändert oder löscht Strings einer ASCII Datei.

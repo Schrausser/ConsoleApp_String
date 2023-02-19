@@ -104,3 +104,76 @@ Handhabung:
 Bsp.:  
 
      BIIA bild.jpg bild.bii 4 2
+## AIIB
+
+Recodiert eine SCHRAUSSER CODE oder dezimal encodierte Datei (Encodierung via BIIA.EXE).
+
+Arbeitsweise:
+
+- Übernahme einer SCHRAUSSER CODE Datei (*.bii). 
+- Ausgabe der recodierten Ursprungsdatei.
+
+Handhabung:
+
+     AIIB [input]
+     [input] ... SCHRAUSSER CODE Datei 
+
+Bsp.:   
+
+     AIIB bild.bii
+
+## STGERSETZ
+
+Änderung ein oder mehrerer Substrings (Einzelzeichen oder Zeichenketten) in einem zusammenhängenden String (ohne Leerzeichen), eingelesen als Zeile einer ASCII Datei. 
+
+Arbeitsweise:
+
+- Übernahme einer Zeile aus einem ASCII-File. 
+
+Bsp.: 	
+  
+      12345678
+	  abcdefghijk
+	  ABCDEFG
+	  1234567890
+
+- zeilenweise Bearbeitung der Strings und Ausgabe in ein ASCII-File.
+
+Die Bearbeitungsschritte werden in stgerset_log.txt protokolliert.
+
+Handhabung:
+
+     STGERSETZ [input] [output] [typ] [alt] [neu]
+     [input] .... Eingabe Datei (Strings zeilenweise)
+     [output] ... Ausgabe Datei (Strings zeilenweise)
+     [typ] ...... (0):löschen
+                     (1):ändern
+                     (2):ein Leerzeichen einfügen
+     [alt] .......  zu ändernde Zeichenkette (Substring) in Eingabe Datei
+     [neu] ...... ändern in.. Zeichenkette (Substring) in Ausgabe Datei
+
+Die Art des Arguments [neu] hat für typ (0) löschen und (2) ein Leerzeichen einfügen keine Auswirkung, muss aber als beliebiges Zeichen angegeben werden (iuF.  '-').
+Ein Leerzeichen in der Eingabedatei trennt die Zeichenkette und führen zu einer neuen Zeile in der Ausgabedatei. Manche Sonderzeichen bleiben unberücksichtigt.
+
+Bsp.: 	
+
+     STGERSETZ input.txt output.txt 0 8 -  (löscht 8)
+     
+      1234567
+	  abcDEFghijk
+	  ABCDEFG
+	  1234567890
+
+ 	STGERSETZ input.txt output.txt 1 def DEF  (ändert def in DEF 8)
+    
+  	  12345678
+	  abcDEFghijk
+	  ABCDEFG
+	  1234567890
+
+    STGERSETZ input.txt output.txt 2 234 -  (fügt für 234 ein Leerzeichen ein)
+      
+  	  1 5678
+	  abcdefghijk
+	  ABCDEFG
+	  1 567890

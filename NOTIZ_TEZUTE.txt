@@ -2,7 +2,7 @@ TEZUTE by Dietmar SCHRAUSSER 2oo8
 
 Allgemein
 ---------
-DOS Anwendung TEZUTE.EXE zur Änderung einzelner Strings einer Datei.
+DOS Anwendung TEZUTE.EXE zur Ã„nderung einzelner Strings einer Datei.
  
 Handhabung
 ----------
@@ -10,7 +10,7 @@ TEZUTE [input] [output] [a] [b]
 [input] ... Eingabe Datei
 [output] .. Ausgabe Datei 
 [a] ...... String
-[b] ...... ändern 
+[b] ...... Ã¤ndern 
 
 bsp	input.txt
 
@@ -34,4 +34,4 @@ bsp	input.txt
 	9
 	00
 
-	(Zur formatierten Ausgebe Quellcode bearbeiten)
+	(Zur formatierten Ausgabe Quellcode bearbeiten)

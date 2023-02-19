@@ -9,6 +9,15 @@ Handhabung:
      2DEC [x] 
      [x] .... Argument
 
+## DEC2
+
+Dezimalzahl Umwandlung.
+
+Handhabung:
+
+     DEC2 [d]
+     [d] ..Dezimalzahl
+
 ## BIN2DEC
 
 Binärzahl in Dezimalzahl.
@@ -22,8 +31,8 @@ Handhabung:
 
 Ändert oder löscht Strings einer ASCII Datei.
 
-- Übernahme einer ASCII Datei
-- Ausgabe einer modifizierten ASCII Datei
+- Übernahme einer ASCII Datei.
+- Ausgabe einer modifizierten ASCII Datei.
 
 Handhabung:
         
@@ -48,8 +57,8 @@ Handhabung:
      AZUBE [input] [output] [a] [b] 
      [input] ... Eingabe Datei
      [output] .. Ausgabe Datei 
-     [a] ...... Zeichen
-     [b] ...... ändern 
+     [a] ....... Zeichen
+     [b] ....... ändern 
 
 Bsp.: 
 
@@ -91,7 +100,7 @@ Zur formatierten Ausgabe Quellcode bearbeiten.
 Fügt einen String (a) vor und/oder einen String (b) nach jeder Zeile einer Datei ein.
 	
 - Übernahme einer einspaltigen ASCII Datei. 
-- Ausgabe einer (ein-,) zwei- oder dreispaltigen ASCII Datei
+- Ausgabe einer (ein-,) zwei- oder dreispaltigen ASCII Datei.
 
 Handhabung:
 

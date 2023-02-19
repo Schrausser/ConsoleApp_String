@@ -55,6 +55,37 @@ Bsp.:
 
      AZUBE input.txt output.txt , .
 
+## TEZUTE
+
+Änderung einzelner Strings einer Datei.
+ 
+Handhabung:
+
+     TEZUTE [input] [output] [a] [b] 
+     [input] ... Eingabe Datei
+     [output] .. Ausgabe Datei 
+     [a] ....... String
+     [b] ....... ändern 
+
+Bsp.:
+
+      78   00
+      67    8
+      null 00
+      9  null
+
+     TEZUTE input.txt output.txt null 00
+
+         78
+         00
+         67
+         8
+         00
+         00
+         9
+         00
+
+Zur formatierten Ausgabe Quellcode bearbeiten.
 ## AB_L
 
 Fügt einen String (a) vor und/oder einen String (b) nach jeder Zeile einer Datei ein.
@@ -139,7 +170,7 @@ Bsp.:
 
 - zeilenweise Bearbeitung der Strings und Ausgabe in ein ASCII-File.
 
-Die Bearbeitungsschritte werden in stgerset_log.txt protokolliert.
+Die Bearbeitungsschritte werden in stgersetz_log.txt protokolliert.
 
 Handhabung:
 
@@ -147,10 +178,10 @@ Handhabung:
      [input] .... Eingabe Datei (Strings zeilenweise)
      [output] ... Ausgabe Datei (Strings zeilenweise)
      [typ] ...... (0):löschen
-                     (1):ändern
-                     (2):ein Leerzeichen einfügen
-     [alt] .......  zu ändernde Zeichenkette (Substring) in Eingabe Datei
-     [neu] ...... ändern in.. Zeichenkette (Substring) in Ausgabe Datei
+                  (1):ändern
+                  (2):ein Leerzeichen einfügen
+     [alt] ...... zu ändernde Zeichenkette (Substring) in Eingabe Datei
+     [neu] ...... ändern in Zeichenkette (Substring) in Ausgabe Datei
 
 Die Art des Arguments [neu] hat für typ (0) löschen und (2) ein Leerzeichen einfügen keine Auswirkung, muss aber als beliebiges Zeichen angegeben werden (iuF.  '-').
 Ein Leerzeichen in der Eingabedatei trennt die Zeichenkette und führen zu einer neuen Zeile in der Ausgabedatei. Manche Sonderzeichen bleiben unberücksichtigt.

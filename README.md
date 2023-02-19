@@ -7,7 +7,7 @@ Argument in Dezimalzahl.
 Handhabung:
 
      2DEC [x] 
-     [x] .... Argument
+     [x] ... Argument
 
 ## DEC2
 
@@ -16,7 +16,7 @@ Dezimalzahl Umwandlung.
 Handhabung:
 
      DEC2 [d]
-     [d] ..Dezimalzahl
+     [d] ... Dezimalzahl
 
 ## BIN2DEC
 
@@ -26,6 +26,15 @@ Handhabung:
 
      BIN2DEC [b]
      [b] ... Binärzahl
+
+## DEC2BIN
+
+Dezimalzahl in Binärzahl.
+
+Handhabung:
+
+      DEC2BIN [d]
+      [d] ... Dezimalzahl
 
 ## ABCD
 

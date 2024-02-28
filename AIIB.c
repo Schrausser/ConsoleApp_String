@@ -37,7 +37,7 @@ main(int argc, char *argv[])
 	do
 	{
 		if(index>1)        fputc(dez_1,outStream);    //um 1 zeichen versetzte ausgabe
-						// 	fprintf(outStream,"%i\n",dez_1); // zur zeichenvergleichsprüfung
+						// 	fprintf(outStream,"%i\n",dez_1); // zur zeichenvergleichsprÃ¼fung
 		
 		if(mode_==1 || mode_==3) //cd01, cd03
 		{						

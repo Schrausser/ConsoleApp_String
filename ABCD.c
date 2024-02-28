@@ -29,24 +29,24 @@ main(int argc, char *argv[])
 	inStream = fopen( argv[1], "rb" );
 
                          arg_len = strlen(argv[3]);
-	for(iLauf=1; iLauf<= arg_len; iLauf++) datei_in_string1[iLauf] = fgetc(inStream); //die ersten n=String_alt_länge zeichen in vektor einlesen
+	for(iLauf=1; iLauf<= arg_len; iLauf++) datei_in_string1[iLauf] = fgetc(inStream); //die ersten n=String_alt_lÃ¤nge zeichen in vektor einlesen
 	
 	while(1)
 	{	
-		sw=0; // schalterrücksetzung //
+		sw=0; // schalterrÃ¼cksetzung //
 
 		for(iLauf=1; iLauf<= arg_len; iLauf++) if(datei_in_string1[iLauf] == argv[3][iLauf-1]) sw+=1; //zeichenvergleich, schalter sw setzung
 
-		if(sw == arg_len) //alle zeichen übereinstimmend
+		if(sw == arg_len) //alle zeichen Ã¼bereinstimmend
 		{
 			if(argv[5][0]=='0')fprintf(outStream,"%s", argv[4]); //String_neu schreiben
 			if(argv[5][0]=='1')fprintf(outStream,"");            //Nichts schreiben
 			if(argv[5][0]=='2')fprintf(outStream," ");           //Leerzeichen schreiben
 			
-			for(iLauf=1; iLauf<= arg_len;  iLauf++) datei_in_string1[iLauf] = fgetc(inStream); //datei lese position um String_alt länge weiter
+			for(iLauf=1; iLauf<= arg_len;  iLauf++) datei_in_string1[iLauf] = fgetc(inStream); //datei lese position um String_alt lÃ¤nge weiter
 		}
 		
-		if(sw != arg_len) //kein oder nicht alle zeichen übereinstimmend
+		if(sw != arg_len) //kein oder nicht alle zeichen Ã¼bereinstimmend
 		{
 			fputc (datei_in_string1[1], outStream); //erstes zeichen in output datei scheiben
 			

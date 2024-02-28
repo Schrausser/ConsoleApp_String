@@ -1,5 +1,6 @@
 # ConsoleApp_String
-Console applications for string and transformation (German):
+Console applications for string and transformation (German).
+
 ## 2DEC
 
 Argument in Dezimalzahl.
@@ -104,6 +105,7 @@ Bsp.:
          00
 
 Zur formatierten Ausgabe Quellcode bearbeiten.
+
 ## AB_L
 
 Fügt einen String (a) vor und/oder einen String (b) nach jeder Zeile einer Datei ein.
@@ -125,6 +127,7 @@ Bsp.:
 
      AB_L in.txt out.txt move 1 verzeichnis 1 
      AB_L in.txt out.txt del 1 0 0
+
 ## BIIA
 
 Encodiert eine Datei in eine ASCII Datei (Recodierung via AIIB.EXE).
@@ -153,6 +156,7 @@ Handhabung:
 Bsp.:  
 
      BIIA bild.jpg bild.bii 4 2
+
 ## AIIB
 
 Recodiert eine SCHRAUSSER CODE oder dezimal encodierte Datei (Encodierung via BIIA.EXE).

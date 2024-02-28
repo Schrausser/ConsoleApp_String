@@ -6,10 +6,10 @@
 #include <time.h>
 
 void _err_msg (); //---------------------------------------------------------> prozedur fehlermeldung und usage instruktion   
-void _head(void); //---------------------------------------------------------> prozedur f¸r kopfzeilen                        
+void _head(void); //---------------------------------------------------------> prozedur f√ºr kopfzeilen                        
 
 char dbuffer [9],tbuffer [9], datei_in_string[30];  //-----------------------> buffer fuer time und date, variable f. dateizeichenm
-main(int argc, char *argv[]) //----------------------------------------------> main ¸bernimmt n argumente im vektor argv     
+main(int argc, char *argv[]) //----------------------------------------------> main √ºbernimmt n argumente im vektor argv     
 {   
 	FILE *inStream, *outStream; //---------------------------------------> streams                                        
       
@@ -36,13 +36,13 @@ main(int argc, char *argv[]) //----------------------------------------------> m
 	
 	fscanf (inStream,"%s", datei_in_string);
 	
-	if (strcmp(datei_in_string, argv[3]) == 0)	//-------------------> vergleich mit zu ‰nderndem string 
+	if (strcmp(datei_in_string, argv[3]) == 0)	//-------------------> vergleich mit zu √§nderndem string 
 		{									
-			fprintf (outStream,"%s\n", argv[4]);//---------------> ausgabe von ge‰ndertem string (string pointer argv[4])	
+			fprintf (outStream,"%s\n", argv[4]);//---------------> ausgabe von ge√§ndertem string (string pointer argv[4])	
 		} 
 		else 								
 		{  
-			fprintf (outStream,"%s\n", datei_in_string);//-------> sonst ausgabe von urspr¸nglichem zeichen	
+			fprintf (outStream,"%s\n", datei_in_string);//-------> sonst ausgabe von urspr√ºnglichem zeichen	
 		}
 	
 

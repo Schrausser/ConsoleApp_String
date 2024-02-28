@@ -1,28 +1,28 @@
 //---------------------------------------------------------------------------------------------------| STGERSETZ by Dietmar SCHRAUSSER 2oo8;
-//                                                                                                     zur Änderung von Substrings (Einzelzeichen oder 
+//                                                                                                     zur Ã„nderung von Substrings (Einzelzeichen oder 
 //																	                                   kurzer Zeichenketten) in Strings (iA.Zeile einer ASCII Datei).
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 void _err_msg (); //---------------------------------------------------------------------------------> Prozedur Fehlermeldung und usage Instruktion.   
-void _head(); //-------------------------------------------------------------------------------------> Prozedur für Kopfzeilen.
+void _head(); //-------------------------------------------------------------------------------------> Prozedur fÃ¼r Kopfzeilen.
 
 char dbuffer [9],tbuffer [9]; //---------------------------------------------------------------------> Buffer fuer time und date.  
 
 char *zeichen_ptr, //--------------------------------------------------------------------------------> Zeiger auf das Zeichen[iLauf] in der urspr. Zeichenkette. 
-	 _zeichenkette[100], //--------------------------------------------------------------------------> Urspr. Zeichenkette mit zu änderndem String. 
+	 _zeichenkette[100], //--------------------------------------------------------------------------> Urspr. Zeichenkette mit zu Ã¤nderndem String. 
 						//											                                   (wird aus Datei eingelesen).
-     _zeichenkette_neu[100], //----------------------------------------------------------------------> Neue Zeichenkette mit geändertem String (wird in Datei geschrieben). 
+     _zeichenkette_neu[100], //----------------------------------------------------------------------> Neue Zeichenkette mit geÃ¤ndertem String (wird in Datei geschrieben). 
 	 *zk_zeichen, //---------------------------------------------------------------------------------> 1.Zeiger auf ausgeschnitten String (ab Zeiger zeichen_ptr) 
-	             //                                                                                    mit der Länge des zu ändernden Zeichens.
+	             //                                                                                    mit der LÃ¤nge des zu Ã¤ndernden Zeichens.
 	 **ptr_argv4, //---------------------------------------------------------------------------------> Zeiger auf Zeiger.
 	 **ptr_argv5, //---------------------------------------------------------------------------------> Zeiger auf Zeiger.
 	 *zkn_zeichen; //--------------------------------------------------------------------------------> 2.Zeiger auf ausgeschnitten String (ab Zeiger zeichen_ptr). 
-                  //                                                                                   mit der Länge des zu ändernden Zeichens (sonst Kollision der Speicheradressen).
+                  //                                                                                   mit der LÃ¤nge des zu Ã¤ndernden Zeichens (sonst Kollision der Speicheradressen).
 
 int  _zeichenkette_laenge, //------------------------------------------------------------------------> Anzahl der Zeichen in urspr. Zeichenkette.
-	 zeichen_alt_laenge=1, //------------------------------------------------------------------------> Anzahl der Zeichen in zu änderndem String.
+	 zeichen_alt_laenge=1, //------------------------------------------------------------------------> Anzahl der Zeichen in zu Ã¤nderndem String.
 	 iLauf = 1; //-----------------------------------------------------------------------------------> Laufindex i bis Ende der urspr Zeichenkette.
 
 
@@ -32,7 +32,7 @@ FILE *instream, //--------------------------------------------------------------
 
 main(int argc, char *argv[])
 {
-	//argv[4];---------------------------------------------------------------------------------------> Zu ändernder String in urpr. Zeichenkette.
+	//argv[4];---------------------------------------------------------------------------------------> Zu Ã¤ndernder String in urpr. Zeichenkette.
 	//argv[5];---------------------------------------------------------------------------------------> Neuer String. 
 	
 	ptr_argv4 = argv[4] ; // ------------------------------------------------------------------------> Pointer auf Pointer (nur zur Demonstration).
@@ -46,7 +46,7 @@ main(int argc, char *argv[])
 	
 	_head(); //--------------------------------------------------------------------------------------> Kopfzeilenausgabe in Konsole.
 
-	//-----------------------------------------------------------------------------------------------| Öffnen der Datenströme.
+	//-----------------------------------------------------------------------------------------------| Ã–ffnen der DatenstrÃ¶me.
 	logstream = fopen ("stgersetz_log.txt", "w");
 	instream  = fopen ( argv[1], "r");
 	outstream = fopen ( argv[2], "w");
@@ -68,13 +68,13 @@ main(int argc, char *argv[])
 		/*LOG*/ fprintf (logstream, "_zeichenkette:%s\n",_zeichenkette);/*LOG*/
 		
 		_zeichenkette_laenge = strlen(_zeichenkette); //--------------------------------------------> Bestimmung der Zeichenanzahl in urspr. Zeichenkette.
-		zeichen_alt_laenge = strlen(ptr_argv4); //--------------------------------------------------> Bestimmung der Zeichenanzahl in zu änderndem String.
+		zeichen_alt_laenge = strlen(ptr_argv4); //--------------------------------------------------> Bestimmung der Zeichenanzahl in zu Ã¤nderndem String.
 		
 		/*LOG*/	fprintf (logstream, "zk_laenge:%i zeichen_alt_laenge:%i\n", 
 				_zeichenkette_laenge, zeichen_alt_laenge);/*LOG*/
 	
-		//------------------------------------------------------------------------------------------| Änderungsschleife
-		for(iLauf = 1; iLauf <= _zeichenkette_laenge; iLauf++) //                                     bis Länge der urspr. Zeichenkette. 
+		//------------------------------------------------------------------------------------------| Ã„nderungsschleife
+		for(iLauf = 1; iLauf <= _zeichenkette_laenge; iLauf++) //                                     bis LÃ¤nge der urspr. Zeichenkette. 
 		{
 			/*LOG*/ fprintf (logstream, "iLauf:%i\n", iLauf);/*LOG*/
 		
@@ -83,39 +83,39 @@ main(int argc, char *argv[])
 			/*LOG*/ fprintf (logstream, "zeichen_ptr:%s zeichenkette[iLauf-1]:%s\n", 
 				zeichen_ptr, &_zeichenkette[iLauf-1] );/*LOG*/ 
 		
-			strncpy (&zk_zeichen, zeichen_ptr, zeichen_alt_laenge); //------------------------------> Kopiert einen String der Länge des zu ändernden Strings ab Stelle iLauf in zk_zeichen. 
+			strncpy (&zk_zeichen, zeichen_ptr, zeichen_alt_laenge); //------------------------------> Kopiert einen String der LÃ¤nge des zu Ã¤ndernden Strings ab Stelle iLauf in zk_zeichen. 
 		 
 			/*LOG*/ fprintf (logstream, "zk_zeichen:%s\n", &zk_zeichen );/*LOG*/ 
 		
-			//--------------------------------------------------------------------------------------| Vergleich ausgeschnittener String (zk_zeichen) mit zu änderndem String (argv[3]). 
+			//--------------------------------------------------------------------------------------| Vergleich ausgeschnittener String (zk_zeichen) mit zu Ã¤nderndem String (argv[3]). 
 			if (strcmp (&zk_zeichen, ptr_argv4) == 0)
 			{
-				if ( atoi(argv[3]) == 1 ) // -------------------------------------------------------> Wenn Typ: Ändern. 
+				if ( atoi(argv[3]) == 1 ) // -------------------------------------------------------> Wenn Typ: Ã„ndern. 
 				{
-					strcat(_zeichenkette_neu, ptr_argv5); //JA -------------------------------------> Anfügen von neuem String argv[4] an die neue Zeichenkette.
+					strcat(_zeichenkette_neu, ptr_argv5); //JA -------------------------------------> AnfÃ¼gen von neuem String argv[4] an die neue Zeichenkette.
 				}
-				if ( atoi(argv[3]) == 0 ) // -------------------------------------------------------> Wenn Typ: Löschen. 
+				if ( atoi(argv[3]) == 0 ) // -------------------------------------------------------> Wenn Typ: LÃ¶schen. 
 				{
-					//------------------------------------------------------------------------------> Nichts an neue Zeichenkette anfügen.
+					//------------------------------------------------------------------------------> Nichts an neue Zeichenkette anfÃ¼gen.
 				}
-				if ( atoi(argv[3]) == 2 ) // -------------------------------------------------------> Wenn Typ Leerzeichen einfügen. 
+				if ( atoi(argv[3]) == 2 ) // -------------------------------------------------------> Wenn Typ Leerzeichen einfÃ¼gen. 
 				{
-					strcat(_zeichenkette_neu, " "); //----------------------------------------------> Leerzeichen an neue Zeichenkette anfügen.
+					strcat(_zeichenkette_neu, " "); //----------------------------------------------> Leerzeichen an neue Zeichenkette anfÃ¼gen.
 				}
 			
 				/*LOG*/ fprintf (logstream, 
 								"if(TRUE):_zeichenkette_neu:%s\n", _zeichenkette_neu);/*LOG*/ 
 			
-				iLauf += (zeichen_alt_laenge - 1); //-----------------------------------------------> Verschiebung des Laufindex um +Stringlänge des alten Zeichens - 1 
-			                                       //                                                 (Verschiebung um +1 übernimmt 'for' selbst).		
+				iLauf += (zeichen_alt_laenge - 1); //-----------------------------------------------> Verschiebung des Laufindex um +StringlÃ¤nge des alten Zeichens - 1 
+			                                       //                                                 (Verschiebung um +1 Ã¼bernimmt 'for' selbst).		
 			}
 			else
 			{
-				strncpy (&zkn_zeichen, zeichen_ptr, 1); //SONST ------------------------------------> Kopiert einen String der Länge 1 (Position iLauf in zk_zeichen).  
+				strncpy (&zkn_zeichen, zeichen_ptr, 1); //SONST ------------------------------------> Kopiert einen String der LÃ¤nge 1 (Position iLauf in zk_zeichen).  
 			 
 				/*LOG*/ fprintf (logstream, "zkn_zeichen:%s\n", &zkn_zeichen );/*LOG*/ 
 			
-				strcat(_zeichenkette_neu, &zkn_zeichen); //-----------------------------------------> Anfügen von urspr. Zeichen an die neue Zeichenkette.
+				strcat(_zeichenkette_neu, &zkn_zeichen); //-----------------------------------------> AnfÃ¼gen von urspr. Zeichen an die neue Zeichenkette.
 			
 				/*LOG*/ fprintf (logstream, "else:_zeichenkette_neu:%s\n", _zeichenkette_neu);/*LOG*/ 
 			}
@@ -123,13 +123,13 @@ main(int argc, char *argv[])
 	
 		fprintf (outstream, "%s\n", _zeichenkette_neu); //------------------------------------------> Ausgabe der neuen Zeichenkette in Ausgabedatei.
 	
-		strcpy (_zeichenkette_neu, ""); //----------------------------------------------------------> Löschen von zeichenkette_neu.
+		strcpy (_zeichenkette_neu, ""); //----------------------------------------------------------> LÃ¶schen von zeichenkette_neu.
 	
 	}while (feof (instream) == 0);
 	
 	/*LOG*/ fprintf (logstream, "END\n----\n");/*LOG*/ 
 	
-	//----------------------------------------------------------------------------------------------> Schliessung der Datenströme.
+	//----------------------------------------------------------------------------------------------> Schliessung der DatenstrÃ¶me.
 	fclose (instream);
 	fclose (logstream);
 	fclose (outstream);

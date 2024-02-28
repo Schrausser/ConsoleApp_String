@@ -54,7 +54,7 @@ main(int argc, char *argv[])
 		if(atoi(argv[3])==7)                            sprintf(zei,"%o", c_2); //oct
 		if(atoi(argv[3])==8)                            sprintf(zei,"%c", c_2); //ascii
 
-		if (index > 1)  // um 1 zeichen versetzte ausgabe in outstream (lˆscht anh‰ngsel am ende der datei)
+		if (index > 1)  // um 1 zeichen versetzte ausgabe in outstream (l√∂scht anh√§ngsel am ende der datei)
 		{
 			if(atoi(argv[4])==1)     fprintf (outStream,"%s\n", zei); //1-spaltig
 			if(atoi(argv[4])==2)								      //1-zeilig

@@ -142,10 +142,10 @@ Handhabung:
      BIIA [input] [output] [mode] [form]
      [input] .... Eingabe Datei
      [output] ... Ausgabe Datei im ASCII Format (*.bii)
-     [mode] ..... (1):cd01 SCHRAUSSER CODE cd01 Grossbuchstaben-Kombination 
-                  (2) Zeichen, bsp: AA, FD, ..., gute Lesbarkeit - Zeicheneindeutigkeit zur Archivierung)(2):cd02 SCHRAUSSER CODE cd02 Tastaturzeichen-Kombination (1  oder 2 Zeichen, bsp: a, 1A, ..., geringer Dateiumfang) 
+     [mode] ..... (1):cd01 SCHRAUSSER CODE cd01 Grossbuchstaben-Kombination (2 Zeichen, bsp: AA, FD, ..., gute Lesbarkeit - Zeicheneindeutigkeit zur Archivierung)
+		  (2):cd02 SCHRAUSSER CODE cd02 Tastaturzeichen-Kombination (1 oder 2 Zeichen, bsp: a, 1A, ..., geringer Dateiumfang) 
                   (3):cd03 SCHRAUSSER CODE cd03 Zahlen-Kombination (3 Zeichen, bsp: 001, 123, ..., maximale Lesbarkeit)
-                  (4):cd04 SCHRAUSSER CODE cd04 ASCII-Kombination (1  oder 2 Zeichen, bsp: -, #+, ..., minimaler Dateiumfang) 
+                  (4):cd04 SCHRAUSSER CODE cd04 ASCII-Kombination (1 oder 2 Zeichen, bsp: -, #+, ..., minimaler Dateiumfang) 
                   (5):HEX  Hexadezimalwert - Keine AIIB Recodierung
                   (6):DEZ  Dezimalwert
                   (7):OKT  Oktalwert - Keine AIIB Recodierung

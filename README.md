@@ -215,7 +215,7 @@ Bsp.:
       1234567
 	  abcDEFghijk
 	  ABCDEFG
-	  1234567890
+	  123456790
 
  	STGERSETZ input.txt output.txt 1 def DEF  (ändert def in DEF)
     

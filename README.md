@@ -192,7 +192,7 @@ Bsp.:
 
 - zeilenweise Bearbeitung der Strings und Ausgabe in ein ASCII-File.
 
-Die Bearbeitungsschritte werden in stgersetz_log.txt protokolliert.
+Die Bearbeitungsschritte werden in `stgersetz_log.txt` protokolliert.
 
 Handhabung:
 
@@ -205,8 +205,8 @@ Handhabung:
      [alt] ...... zu ändernde Zeichenkette (Substring) in Eingabe Datei
      [neu] ...... ändern in Zeichenkette (Substring) in Ausgabe Datei
 
-Die Art des Arguments [neu] hat für typ (0) löschen und (2) ein Leerzeichen einfügen keine Auswirkung, muss aber als beliebiges Zeichen angegeben werden (iuF.  '-').
-Ein Leerzeichen in der Eingabedatei trennt die Zeichenkette und führen zu einer neuen Zeile in der Ausgabedatei. Manche Sonderzeichen bleiben unberücksichtigt.
+Die Art des Arguments [neu] hat für *typ* (0) *löschen* und (2) *ein Leerzeichen einfügen* keine Auswirkung, muss aber als beliebiges Zeichen angegeben werden (iuF.  '-').
+Ein Leerzeichen in der Eingabedatei trennt die Zeichenkette und führt zu einer neuen Zeile in der Ausgabedatei. Manche Sonderzeichen bleiben unberücksichtigt.
 
 Bsp.: 	
 

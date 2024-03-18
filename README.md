@@ -130,7 +130,7 @@ Bsp.:
 
 ## BIIA
 
-Encodiert eine Datei in eine ASCII Datei (Recodierung via AIIB.EXE).
+Encodiert eine Datei in eine ASCII Datei (Recodierung via `AIIB.EXE`).
 
 Arbeitsweise:
 
@@ -159,7 +159,7 @@ Bsp.:
 
 ## AIIB
 
-Recodiert eine SCHRAUSSER CODE oder dezimal encodierte Datei (Encodierung via BIIA.EXE).
+Recodiert eine SCHRAUSSER CODE oder dezimal encodierte Datei (Encodierung via `BIIA.EXE`).
 
 Arbeitsweise:
 

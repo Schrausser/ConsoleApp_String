@@ -1,0 +1,227 @@
+<html> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Author" content="Dietmar Gerald Schrausser">
+
+<title>
+ConsoleApp_String/README
+</title>
+
+</head> 
+<body style="font-family:calibri;font-size:85%;background-color:#eceff1;color:#37474f">
+
+<style>
+a {color: #78909c; }
+a:visited {color: #78909c;}
+</style>
+<h1 id="consoleapp_string">ConsoleApp_String</h1>
+<p>Console applications for string and transformation (German).</p>
+<h2 id="2dec">2DEC</h2>
+<p>Argument in Dezimalzahl.</p>
+<p>Handhabung:</p>
+<pre><code> 2DEC [x] 
+ [x] ... Argument
+</code></pre>
+<h2 id="dec2">DEC2</h2>
+<p>Dezimalzahl Umwandlung.</p>
+<p>Handhabung:</p>
+<pre><code> DEC2 [d]
+ [d] ... Dezimalzahl
+</code></pre>
+<h2 id="bin2dec">BIN2DEC</h2>
+<p>Binärzahl in Dezimalzahl.</p>
+<p>Handhabung:</p>
+<pre><code> BIN2DEC [b]
+ [b] ... Binärzahl
+</code></pre>
+<h2 id="dec2bin">DEC2BIN</h2>
+<p>Dezimalzahl in Binärzahl.</p>
+<p>Handhabung:</p>
+<pre><code>  DEC2BIN [d]
+  [d] ... Dezimalzahl
+</code></pre>
+<h2 id="abcd">ABCD</h2>
+<p>Ändert oder löscht Strings einer ASCII Datei.</p>
+<ul>
+<li>Übernahme einer ASCII Datei.</li>
+<li>Ausgabe einer modifizierten ASCII Datei.</li>
+</ul>
+<p>Handhabung:</p>
+<pre><code> ABCD [input] [output] [ab] [cd] [sw]
+ [input] ... Eingabe Datei
+ [output] .. Ausgabe Datei 
+ [ab] ...... String der zu modifizieren ist (String_alt)
+ [cd] ...... String der eingefügt wird (String_neu)
+ [sw] ...... (0):modifiziert (1):löscht String_alt (2):fügt ein Leerzeichen ein
+</code></pre>
+<p>Bsp.:</p>
+<pre><code> ABCD input.txt output.txt .txt .asc 0
+ ABCD input.txt output.txt REM 0 1
+</code></pre>
+<h2 id="azube">AZUBE</h2>
+<p>Änderung einzelner Zeichen einer ASCII Datei.</p>
+<p>Handhabung:</p>
+<pre><code> AZUBE [input] [output] [a] [b] 
+ [input] ... Eingabe Datei
+ [output] .. Ausgabe Datei 
+ [a] ....... Zeichen
+ [b] ....... ändern 
+</code></pre>
+<p>Bsp.:</p>
+<pre><code> AZUBE input.txt output.txt , .
+</code></pre>
+<h2 id="tezute">TEZUTE</h2>
+<p>Änderung einzelner Strings einer Datei.</p>
+<p>Handhabung:</p>
+<pre><code> TEZUTE [input] [output] [a] [b] 
+ [input] ... Eingabe Datei
+ [output] .. Ausgabe Datei 
+ [a] ....... String
+ [b] ....... ändern 
+</code></pre>
+<p>Bsp.:</p>
+<pre><code>  78   00
+  67    8
+  null 00
+  9  null
+
+ TEZUTE input.txt output.txt null 00
+
+     78
+     00
+     67
+     8
+     00
+     00
+     9
+     00
+</code></pre>
+<p>Zur formatierten Ausgabe Quellcode bearbeiten.</p>
+<h2 id="ab_l">AB_L</h2>
+<p>Fügt einen String (a) vor und/oder einen String (b) nach jeder Zeile einer Datei ein.</p>
+<ul>
+<li>Übernahme einer einspaltigen ASCII Datei.</li>
+<li>Ausgabe einer (ein-,) zwei- oder dreispaltigen ASCII Datei.</li>
+</ul>
+<p>Handhabung:</p>
+<pre><code> AB_L [input] [output] [a] [sw] [z] [sw]
+ [input] ... Eingabe Datei 
+ [output] .. Ausgabe Datei 
+ [a]........ String welcher vor jeder Zeile der Inputdatei eingefügt wird
+ [sw].......(0): nichts vor jeder Zeile einfügen
+ [z]........ String welcher nach jeder Zeile der Inputdatei eingefügt wird
+ [sw].......(0): nichts nach jeder Zeile einfügen
+</code></pre>
+<p>Bsp.:</p>
+<pre><code> AB_L in.txt out.txt move 1 verzeichnis 1 
+ AB_L in.txt out.txt del 1 0 0
+</code></pre>
+<h2 id="biia">BIIA</h2>
+<p>Encodiert eine Datei in eine ASCII Datei (Recodierung via <code>AIIB.EXE</code>).</p>
+<p>Arbeitsweise:</p>
+<ul>
+<li>Übernahme einer Datei.</li>
+<li>Ausgabe einer encodierten ASCII Datei (*.bii).</li>
+</ul>
+<p>Handhabung:</p>
+<pre><code> BIIA [input] [output] [mode] [form]
+ [input] .... Eingabe Datei
+ [output] ... Ausgabe Datei im ASCII Format (*.bii)
+ [mode] ..... (1):cd01 SCHRAUSSER CODE cd01 Grossbuchstaben-Kombination (2 Zeichen, bsp: AA, FD, ..., gute Lesbarkeit - Zeicheneindeutigkeit zur Archivierung)
+              (2):cd02 SCHRAUSSER CODE cd02 Tastaturzeichen-Kombination (1 oder 2 Zeichen, bsp: a, 1A, ..., geringer Dateiumfang) 
+              (3):cd03 SCHRAUSSER CODE cd03 Zahlen-Kombination (3 Zeichen, bsp: 001, 123, ..., maximale Lesbarkeit)
+              (4):cd04 SCHRAUSSER CODE cd04 ASCII-Kombination (1 oder 2 Zeichen, bsp: -, #+, ..., minimaler Dateiumfang) 
+              (5):HEX  Hexadezimalwert - Keine AIIB Recodierung
+              (6):DEZ  Dezimalwert
+              (7):OKT  Oktalwert - Keine AIIB Recodierung
+              (8):ASCII-Zeichen direkt - Keine AIIB Recodierung
+ [form] ..... (1):1-spaltig ASCII Ausgabe 
+              (2):1-zeilig ASCII Ausgabe im Block ohne Seitenumbruch 
+</code></pre>
+<p>Bsp.:</p>
+<pre><code> BIIA bild.jpg bild.bii 4 2
+</code></pre>
+<h2 id="aiib">AIIB</h2>
+<p>Recodiert eine SCHRAUSSER CODE oder dezimal encodierte Datei (Encodierung via <code>BIIA.EXE</code>).</p>
+<p>Arbeitsweise:</p>
+<ul>
+<li>Übernahme einer SCHRAUSSER CODE Datei (*.bii).</li>
+<li>Ausgabe der recodierten Ursprungsdatei.</li>
+</ul>
+<p>Handhabung:</p>
+<pre><code> AIIB [input]
+ [input] ... SCHRAUSSER CODE Datei 
+</code></pre>
+<p>Bsp.:</p>
+<pre><code> AIIB bild.bii
+</code></pre>
+<h2 id="stgersetz">STGERSETZ</h2>
+<p>Änderung ein oder mehrerer Substrings (Einzelzeichen oder Zeichenketten) in einem zusammenhängenden String (ohne Leerzeichen), eingelesen als Zeile einer ASCII Datei.</p>
+<p>Arbeitsweise:</p>
+<ul>
+<li>Übernahme einer Zeile aus einem ASCII-File.</li>
+</ul>
+<p>Bsp.:</p>
+<pre><code>  12345678
+  abcdefghijk
+  ABCDEFG
+  1234567890
+</code></pre>
+<ul>
+<li>zeilenweise Bearbeitung der Strings und Ausgabe in ein ASCII-File.</li>
+</ul>
+<p>Die Bearbeitungsschritte werden in <code>stgersetz_log.txt</code> protokolliert.</p>
+<p>Handhabung:</p>
+<pre><code> STGERSETZ [input] [output] [typ] [alt] [neu]
+ [input] .... Eingabe Datei (Strings zeilenweise)
+ [output] ... Ausgabe Datei (Strings zeilenweise)
+ [typ] ...... (0):löschen
+              (1):ändern
+              (2):ein Leerzeichen einfügen
+ [alt] ...... zu ändernde Zeichenkette (Substring) in Eingabe Datei
+ [neu] ...... ändern in Zeichenkette (Substring) in Ausgabe Datei
+</code></pre>
+<p>Die Art des Arguments [neu] hat für <em>typ</em> (0) <em>löschen</em> und (2) <em>ein Leerzeichen einfügen</em> keine Auswirkung, muss aber als beliebiges Zeichen angegeben werden (iuF.  '-').
+Ein Leerzeichen in der Eingabedatei trennt die Zeichenkette und führt zu einer neuen Zeile in der Ausgabedatei. Manche Sonderzeichen bleiben unberücksichtigt.</p>
+<p>Bsp.:</p>
+<pre><code> STGERSETZ input.txt output.txt 0 8 -  (löscht 8)
+ 
+  1234567
+  abcDEFghijk
+  ABCDEFG
+  123456790
+
+STGERSETZ input.txt output.txt 1 def DEF  (ändert def in DEF)
+
+  12345678
+  abcDEFghijk
+  ABCDEFG
+  1234567890
+
+STGERSETZ input.txt output.txt 2 234 -  (fügt für 234 ein Leerzeichen ein)
+  
+  1 5678
+  abcdefghijk
+  ABCDEFG
+  1 567890
+</code></pre>
+
+<hr WIDTH="75%">
+<blockquote ALIGN="CENTER">
+<center>
+<a href="https://github.com/Schrausser/ConsoleApp_String">
+ConsoleApp_String
+</a>
+<br><font color="#999999"><font size=-1>
+<a
+href="https://orcid.org/0000-0002-4924-8280">
+Dietmar Gerald Schrausser
+</a>
+<p>24.07.2025</p>
+</font></font>
+</center>
+</blockquote>	
+
+</body>
+</html>

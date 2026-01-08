@@ -8,7 +8,7 @@ Argument in Dezimalzahl.
 Handhabung:
 
      2DEC [x] 
-     [x] ... Argument
+      [x] ... Argument
 
 ## DEC2
 
@@ -17,7 +17,7 @@ Dezimalzahl Umwandlung.
 Handhabung:
 
      DEC2 [d]
-     [d] ... Dezimalzahl
+      [d] ... Dezimalzahl
 
 ## BIN2DEC
 
@@ -26,7 +26,7 @@ Binärzahl in Dezimalzahl.
 Handhabung:
 
      BIN2DEC [b]
-     [b] ... Binärzahl
+      [b] ... Binärzahl
 
 ## DEC2BIN
 
@@ -35,7 +35,7 @@ Dezimalzahl in Binärzahl.
 Handhabung:
 
       DEC2BIN [d]
-      [d] ... Dezimalzahl
+       [d] ... Dezimalzahl
 
 ## ABCD
 
@@ -47,11 +47,11 @@ Handhabung:
 Handhabung:
         
      ABCD [input] [output] [ab] [cd] [sw]
-     [input] ... Eingabe Datei
-     [output] .. Ausgabe Datei 
-     [ab] ...... String der zu modifizieren ist (String_alt)
-     [cd] ...... String der eingefügt wird (String_neu)
-     [sw] ...... (0):modifiziert (1):löscht String_alt (2):fügt ein Leerzeichen ein
+      [input] ... Eingabe Datei
+      [output] .. Ausgabe Datei 
+      [ab] ...... String der zu modifizieren ist (String_alt)
+      [cd] ...... String der eingefügt wird (String_neu)
+      [sw] ...... (0):modifiziert (1):löscht String_alt (2):fügt ein Leerzeichen ein
 
 Bsp.: 
 
@@ -65,10 +65,10 @@ Bsp.:
 Handhabung:
 
      AZUBE [input] [output] [a] [b] 
-     [input] ... Eingabe Datei
-     [output] .. Ausgabe Datei 
-     [a] ....... Zeichen
-     [b] ....... ändern 
+      [input] ... Eingabe Datei
+      [output] .. Ausgabe Datei 
+      [a] ....... Zeichen
+      [b] ....... ändern 
 
 Bsp.: 
 
@@ -81,10 +81,10 @@ Bsp.:
 Handhabung:
 
      TEZUTE [input] [output] [a] [b] 
-     [input] ... Eingabe Datei
-     [output] .. Ausgabe Datei 
-     [a] ....... String
-     [b] ....... ändern 
+      [input] ... Eingabe Datei
+      [output] .. Ausgabe Datei 
+      [a] ....... String
+      [b] ....... ändern 
 
 Bsp.:
 
@@ -116,12 +116,12 @@ Fügt einen String (a) vor und/oder einen String (b) nach jeder Zeile einer Date
 Handhabung:
 
      AB_L [input] [output] [a] [sw] [z] [sw]
-     [input] ... Eingabe Datei 
-     [output] .. Ausgabe Datei 
-     [a]........ String welcher vor jeder Zeile der Inputdatei eingefügt wird
-     [sw].......(0): nichts vor jeder Zeile einfügen
-     [z]........ String welcher nach jeder Zeile der Inputdatei eingefügt wird
-     [sw].......(0): nichts nach jeder Zeile einfügen
+      [input] ... Eingabe Datei 
+      [output] .. Ausgabe Datei 
+      [a]........ String welcher vor jeder Zeile der Inputdatei eingefügt wird
+      [sw].......(0): nichts vor jeder Zeile einfügen
+      [z]........ String welcher nach jeder Zeile der Inputdatei eingefügt wird
+      [sw].......(0): nichts nach jeder Zeile einfügen
 
 Bsp.: 
 
@@ -140,18 +140,18 @@ Arbeitsweise:
 Handhabung:
 
      BIIA [input] [output] [mode] [form]
-     [input] .... Eingabe Datei
-     [output] ... Ausgabe Datei im ASCII Format (*.bii)
-     [mode] ..... (1):cd01 SCHRAUSSER CODE cd01 Grossbuchstaben-Kombination (2 Zeichen, bsp: AA, FD, ..., gute Lesbarkeit - Zeicheneindeutigkeit zur Archivierung)
-                  (2):cd02 SCHRAUSSER CODE cd02 Tastaturzeichen-Kombination (1 oder 2 Zeichen, bsp: a, 1A, ..., geringer Dateiumfang) 
-                  (3):cd03 SCHRAUSSER CODE cd03 Zahlen-Kombination (3 Zeichen, bsp: 001, 123, ..., maximale Lesbarkeit)
-                  (4):cd04 SCHRAUSSER CODE cd04 ASCII-Kombination (1 oder 2 Zeichen, bsp: -, #+, ..., minimaler Dateiumfang) 
-                  (5):HEX  Hexadezimalwert - Keine AIIB Recodierung
-                  (6):DEZ  Dezimalwert
-                  (7):OKT  Oktalwert - Keine AIIB Recodierung
-                  (8):ASCII-Zeichen direkt - Keine AIIB Recodierung
-     [form] ..... (1):1-spaltig ASCII Ausgabe 
-                  (2):1-zeilig ASCII Ausgabe im Block ohne Seitenumbruch 
+      [input] .... Eingabe Datei
+      [output] ... Ausgabe Datei im ASCII Format (*.bii)
+      [mode] ..... (1):cd01 SCHRAUSSER CODE cd01 Grossbuchstaben-Kombination (2 Zeichen, bsp: AA, FD, ..., gute Lesbarkeit - Zeicheneindeutigkeit zur Archivierung)
+                   (2):cd02 SCHRAUSSER CODE cd02 Tastaturzeichen-Kombination (1 oder 2 Zeichen, bsp: a, 1A, ..., geringer Dateiumfang) 
+                   (3):cd03 SCHRAUSSER CODE cd03 Zahlen-Kombination (3 Zeichen, bsp: 001, 123, ..., maximale Lesbarkeit)
+                   (4):cd04 SCHRAUSSER CODE cd04 ASCII-Kombination (1 oder 2 Zeichen, bsp: -, #+, ..., minimaler Dateiumfang) 
+                   (5):HEX  Hexadezimalwert - Keine AIIB Recodierung
+                   (6):DEZ  Dezimalwert
+                   (7):OKT  Oktalwert - Keine AIIB Recodierung
+                   (8):ASCII-Zeichen direkt - Keine AIIB Recodierung
+      [form] ..... (1):1-spaltig ASCII Ausgabe 
+                   (2):1-zeilig ASCII Ausgabe im Block ohne Seitenumbruch 
 
 Bsp.:  
 
@@ -169,7 +169,7 @@ Arbeitsweise:
 Handhabung:
 
      AIIB [input]
-     [input] ... SCHRAUSSER CODE Datei 
+      [input] ... SCHRAUSSER CODE Datei 
 
 Bsp.:   
 
@@ -197,13 +197,13 @@ Die Bearbeitungsschritte werden in `stgersetz_log.txt` protokolliert.
 Handhabung:
 
      STGERSETZ [input] [output] [typ] [alt] [neu]
-     [input] .... Eingabe Datei (Strings zeilenweise)
-     [output] ... Ausgabe Datei (Strings zeilenweise)
-     [typ] ...... (0):löschen
-                  (1):ändern
-                  (2):ein Leerzeichen einfügen
-     [alt] ...... zu ändernde Zeichenkette (Substring) in Eingabe Datei
-     [neu] ...... ändern in Zeichenkette (Substring) in Ausgabe Datei
+      [input] .... Eingabe Datei (Strings zeilenweise)
+      [output] ... Ausgabe Datei (Strings zeilenweise)
+      [typ] ...... (0):löschen
+                   (1):ändern
+                   (2):ein Leerzeichen einfügen
+      [alt] ...... zu ändernde Zeichenkette (Substring) in Eingabe Datei
+      [neu] ...... ändern in Zeichenkette (Substring) in Ausgabe Datei
 
 Die Art des Arguments [neu] hat für *typ* (0) *löschen* und (2) *ein Leerzeichen einfügen* keine Auswirkung, muss aber als beliebiges Zeichen angegeben werden (iuF.  '-').
 Ein Leerzeichen in der Eingabedatei trennt die Zeichenkette und führt zu einer neuen Zeile in der Ausgabedatei. Manche Sonderzeichen bleiben unberücksichtigt.

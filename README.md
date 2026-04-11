@@ -213,7 +213,7 @@ Bsp.:
      STGERSETZ input.txt output.txt 0 8 -  (löscht 8)
      
       1234567
-	  abcDEFghijk
+	  abcdefghijk
 	  ABCDEFG
 	  123456790
 
